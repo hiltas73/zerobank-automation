@@ -31,29 +31,21 @@ public class FindTransactionsStepDefs extends BasePage {
 
     @When("the user enters date range from “{int}-{int}-{int}” to “{int}-{int}-{int}”")
     public void the_user_enters_date_range_from_to(Integer year1, Integer month1, Integer day1, Integer year2, Integer month2, Integer day2) throws InterruptedException {
-        /*String year1Str = Integer.toString(year1);
-        String month1Str = Integer.toString(month1);
-        String day1Str = Integer.toString(day1);
-        System.out.println("year1Str = " + year1Str);
-        System.out.println("month1Str = " + month1Str);
-        System.out.println("day1Str = " + day1Str);
-
-        String year2Str = year2.toString();
-        String month2Str = month2.toString();
-        String day2Str = day2.toString();*/
 
         AccountActivityPage accountActivityPage = new AccountActivityPage();
-        accountActivityPage.DateFrom.sendKeys(Integer.valueOf(year1) + "-" + Integer.valueOf(month1) + "-" + Integer.valueOf(day1));
+        accountActivityPage.DateFrom.click();
+        accountActivityPage.DateFrom.sendKeys(year1.toString()+ "-" + month1.toString() + "-" + day1.toString());
         Thread.sleep(3000);
 
-        accountActivityPage.DateTo.sendKeys(Integer.valueOf(year2) + "-" + Integer.valueOf(month2) + "-" + Integer.valueOf(day2));
+        accountActivityPage.DateTo.sendKeys(year2 + "-" + month2 + "-" + day2);
         Thread.sleep(3000);
     }
 
     @When("clicks search")
-    public void clicks_search() {
+    public void clicks_search() throws InterruptedException {
         AccountActivityPage accountActivityPage = new AccountActivityPage();
         accountActivityPage.FindBtn.click();
+        Thread.sleep(3000);
     }
 
     @Then("results table should only show transactions dates between “{int}-{int}-{int}” to “{int}-{int}-{int}”")
@@ -110,6 +102,82 @@ public class FindTransactionsStepDefs extends BasePage {
             Assert.assertFalse("Verify description NOT show \"OFFICE\" transactions", each.getText().startsWith("OFFICE"));
         }
     }*/
+
+    @When("the user enters description “online”")
+    public void the_user_enters_description_online() throws InterruptedException {
+        new AccountActivityPage().descriptionBtn.clear();
+        Thread.sleep(2000);
+        new AccountActivityPage().descriptionBtn.sendKeys("online" + Keys.ENTER);
+        Thread.sleep(2000);
+    }
+
+
+    @Then("results table should show at least one result under Deposit")
+    public void results_table_should_show_at_least_one_result_under_Deposit() throws InterruptedException {
+        AccountActivityPage accountActivityPage = new AccountActivityPage();
+        int num = 0;
+
+        for (WebElement each : accountActivityPage.depositTable) {
+            System.out.println("each = " + each.getText());
+            Thread.sleep(3000);
+            if (each.getText() != null){
+                try {
+                    num++;
+                    System.out.println("each = " + Double.parseDouble(each.getText()));
+                }catch (Exception e){
+                    num+=0;
+                }
+            }
+
+        }
+        //System.out.println("num = " + num);
+
+        Assert.assertTrue("Verify results table should show at least one result under Deposit",num>0);
+    }
+
+    @Then("results table should show at least one result under Withdrawal")
+    public void results_table_should_show_at_least_one_result_under_Withdrawal() throws InterruptedException {
+        AccountActivityPage accountActivityPage = new AccountActivityPage();
+        int num = 0;
+
+        for (WebElement each : accountActivityPage.withdrawalTable) {
+            System.out.println("each = " + each.getText());
+            Thread.sleep(3000);
+            if (each.getText() != null){
+                try {
+                    num++;
+                    System.out.println("each = " + Double.parseDouble(each.getText()));
+                }catch (Exception e){
+                    num+=0;
+                }
+            }
+
+        }
+        //System.out.println("num = " + num);
+
+        Assert.assertTrue("Verify results table should show at least one result under Withdrawal",num>0);
+    }
+
+    @When("user selects type “Deposit”")
+    public void user_selects_type_Deposit() {
+        System.out.println("---");
+    }
+
+    @Then("results table should show no result under Withdrawal")
+    public void results_table_should_show_no_result_under_Withdrawal() {
+        System.out.println("---");
+    }
+
+    @When("user selects type “Withdrawal”")
+    public void user_selects_type_Withdrawal() {
+        System.out.println("---");
+    }
+
+    @Then("results table should show no result under Deposit")
+    public void results_table_should_show_no_result_under_Deposit() {
+        System.out.println("---");
+    }
+
 
 }
 

@@ -12,7 +12,7 @@ Feature: Find Transactions in Account Activity
     And clicks search
     Then results table should only show transactions dates between “2012-09-02” to “2012-09-06”
     And the results table should only not contain transactions dated “2012-09-01”
-  @wip
+
   Scenario: Search description
     When the user enters description “ONLINE”
     And clicks search
@@ -29,7 +29,7 @@ Feature: Find Transactions in Account Activity
     When the user enters description “online”
     And clicks search
     Then results table should only show descriptions containing “ONLINE”
-
+  @wip
   Scenario: Type
     And clicks search
     Then results table should show at least one result under Deposit

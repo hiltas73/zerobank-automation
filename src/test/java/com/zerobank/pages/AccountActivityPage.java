@@ -31,4 +31,10 @@ public class AccountActivityPage extends BasePage{
     @FindBy(xpath = "(//div/table[@class='table table-condensed table-hover'])[2]/tbody/tr/td[2]")
     public List<WebElement> descriptionTable;
 
+    @FindBy(xpath = "(//tbody)[2]/tr/td[3]")
+    public List<WebElement> depositTable;
+
+    @FindBy(xpath = "(//tbody)[2]/tr/td[4]")
+    public List<WebElement> withdrawalTable;
+
 }
