@@ -49,6 +49,10 @@ public class AccountSummaryPage extends BasePage{
     @FindBy(linkText = "Checking")
     public WebElement checking;
 
+    public void clickLink(String linkName){
+        Driver.get().findElement(By.linkText(linkName)).click();
+    }
+
     /**
      * @return page name, for example: Dashboard
      */

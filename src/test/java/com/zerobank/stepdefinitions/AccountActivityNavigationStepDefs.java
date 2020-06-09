@@ -11,46 +11,28 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
-
 
 public class AccountActivityNavigationStepDefs {
 
     @Given("the user is logged in")
     public void the_user_is_logged_in() {
-        Driver.get().get(ConfigurationReader.get("url"));
-
-        LoginPage loginPage = new LoginPage();
-        loginPage.login(ConfigurationReader.get("username"),ConfigurationReader.get("password"));
+        new LoginPage().login(ConfigurationReader.get("username"),ConfigurationReader.get("password"));
     }
 
-    @When("the user clicks on {string} link on the {string} page")
-    public void the_user_clicks_on_link_on_the_page(String link, String page) {
-        AccountSummaryPage accountSummaryPage = new AccountSummaryPage();
-        Actions actions = new Actions(Driver.get());
-        actions.moveToElement(Driver.get().findElement(By.linkText(link))).click().perform();
+    @When("the user clicks on	{string} link on the Account Summary page")
+    public void the_user_clicks_on_link_on_the_Account_Summary_page(String accountType) {
+        new AccountSummaryPage().clickLink(accountType);
     }
 
     @Then("the {string} page should be displayed")
     public void the_page_should_be_displayed(String pageName) {
-        AccountActivityPage accountActivityPage = new AccountActivityPage();
-        System.out.println("Driver.get().getTitle() = " + Driver.get().getTitle());
-        String actualPageTitle = Driver.get().getTitle();
-        String expectedPageTitle = "Zero - " + pageName;
-        Assert.assertEquals("Verify "+pageName+" is displayed successfully",actualPageTitle,expectedPageTitle);
-
+        String expectedTitle = "Zero - Account Activity";
+        Assert.assertEquals("verify " + pageName + " is displayed", Driver.get().getTitle(), expectedTitle);
     }
 
-    @Then("Account drop down should have {string} selected")
-    public void drop_down_should_have_selected(String expectedOption) {
-        AccountActivityPage activityPage = new AccountActivityPage();
-        Select dropDown = new Select(activityPage.Account);
-        String actualOption = dropDown.getFirstSelectedOption().getText();
-        System.out.println("actualOption = " + actualOption);
-        System.out.println("expectedOption = " + expectedOption);
-        Assert.assertEquals("Verify first selected option is "+expectedOption,expectedOption,actualOption);
+   @Then("Account	drop down should have {string} selected")
+    public void account_drop_down_should_have_selected(String accountName) {
+        Assert.assertTrue("verify drop down should have "+accountName+" selected", new AccountActivityPage().isSelected(accountName));
     }
+
 }

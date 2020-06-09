@@ -1,9 +1,11 @@
 package com.zerobank.pages;
 
 import com.zerobank.utilities.Driver;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
@@ -36,5 +38,29 @@ public class AccountActivityPage extends BasePage{
 
     @FindBy(xpath = "(//tbody)[2]/tr/td[4]")
     public List<WebElement> withdrawalTable;
+
+
+    public void navigateFindTransactions(){
+        BasePage basePage = new BasePage();
+        basePage.navigateToModule("Account Activity");
+        basePage.navigateToModule("Find Transactions");
+    }
+    public boolean isSelected(String str){
+        AccountActivityPage activityPage = new AccountActivityPage();
+        Select dropDown = new Select(activityPage.Account);
+        String actualOption = dropDown.getFirstSelectedOption().getText();
+        String expectedOption = str;
+        //System.out.println("actualOption = " + actualOption);
+        //System.out.println("expectedOption = " + expectedOption);
+        //Assert.assertEquals("Verify first selected option is "+expectedOption+" ",expectedOption,actualOption);
+
+        if (expectedOption.equals(actualOption)){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
 
 }

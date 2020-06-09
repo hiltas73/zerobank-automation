@@ -22,23 +22,42 @@ public class FindTransactionsStepDefs extends BasePage {
         LoginPage loginPage = new LoginPage();
         loginPage.login(ConfigurationReader.get("username"), ConfigurationReader.get("password"));
 
-        BasePage basePage = new BasePage();
-        basePage.navigateToModule("Account Activity");
-        Thread.sleep(3000);
-        basePage.navigateToModule("Find Transactions");
-        Thread.sleep(3000);
+        new AccountActivityPage().navigateFindTransactions();
     }
 
-    @When("the user enters date range from “{int}-{int}-{int}” to “{int}-{int}-{int}”")
-    public void the_user_enters_date_range_from_to(Integer year1, Integer month1, Integer day1, Integer year2, Integer month2, Integer day2) throws InterruptedException {
-
+    @When("the user enters date range from {string} to {string}")
+    public void the_user_enters_date_range_from_to(String fromDate, String toDate) throws InterruptedException {
         AccountActivityPage accountActivityPage = new AccountActivityPage();
-        accountActivityPage.DateFrom.click();
-        accountActivityPage.DateFrom.sendKeys(year1.toString()+ "-" + month1.toString() + "-" + day1.toString());
-        Thread.sleep(3000);
+        //accountActivityPage.DateFrom.click();
+        accountActivityPage.DateFrom.sendKeys(fromDate);
+        Thread.sleep(2000);
 
-        accountActivityPage.DateTo.sendKeys(year2 + "-" + month2 + "-" + day2);
-        Thread.sleep(3000);
+        accountActivityPage.DateTo.sendKeys(toDate);
+        Thread.sleep(2000);
+    }
+
+    @Then("results table should only show transactions between {string} to {string}")
+    public void results_table_should_only_show_transactions_between_to(String string, String string2) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Then("the results should be sorted by most recent date")
+    public void the_results_should_be_sorted_by_most_recent_date() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Then("results table should only show transactions dates between {string} to {string}")
+    public void results_table_should_only_show_transactions_dates_between_to(String string, String string2) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Then("the results table should only not contain transactions dated {string}")
+    public void the_results_table_should_only_not_contain_transactions_dated(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
     }
 
     @When("clicks search")
@@ -48,20 +67,6 @@ public class FindTransactionsStepDefs extends BasePage {
         Thread.sleep(3000);
     }
 
-    @Then("results table should only show transactions dates between “{int}-{int}-{int}” to “{int}-{int}-{int}”")
-    public void results_table_should_only_show_transactions_dates_between_to(Integer int1, Integer int2, Integer int3, Integer int4, Integer int5, Integer int6) {
-        System.out.println("...");
-    }
-
-    @Then("the results should be sorted by most recent date")
-    public void the_results_should_be_sorted_by_most_recent_date() {
-        System.out.println("...");
-    }
-
-    @Then("the results table should only not contain transactions dated “{int}-{int}-{int}”")
-    public void the_results_table_should_only_not_contain_transactions_dated(Integer int1, Integer int2, Integer int3) {
-        System.out.println("...");
-    }
 
     @When("the user enters description “ONLINE”")
     public void the_user_enters_description_ONLINE() {
@@ -157,27 +162,6 @@ public class FindTransactionsStepDefs extends BasePage {
 
         Assert.assertTrue("Verify results table should show at least one result under Withdrawal",num>0);
     }
-
-    @When("user selects type “Deposit”")
-    public void user_selects_type_Deposit() {
-        System.out.println("---");
-    }
-
-    @Then("results table should show no result under Withdrawal")
-    public void results_table_should_show_no_result_under_Withdrawal() {
-        System.out.println("---");
-    }
-
-    @When("user selects type “Withdrawal”")
-    public void user_selects_type_Withdrawal() {
-        System.out.println("---");
-    }
-
-    @Then("results table should show no result under Deposit")
-    public void results_table_should_show_no_result_under_Deposit() {
-        System.out.println("---");
-    }
-
 
 }
 
