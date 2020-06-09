@@ -12,9 +12,12 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
-public class FindTransactionsStepDefs extends BasePage {
+public class FindTransactionsStepDefs {
 
-    @Given("the user accesses the Find Transactions tab")
+
+
+
+    /*@Given("the user accesses the Find Transactions tab")
     public void the_user_accesses_the_Find_Transactions_tab() throws InterruptedException {
         Driver.get().get(ConfigurationReader.get("url"));
         Driver.get().manage().window().maximize();
@@ -100,13 +103,13 @@ public class FindTransactionsStepDefs extends BasePage {
         }
     }
 
-    /*@Then("results table should not show descriptions containing “OFFICE”")
+    *//*@Then("results table should not show descriptions containing “OFFICE”")
     public void results_table_should_not_show_descriptions_containing_OFFICE() {
         AccountActivityPage accountActivityPage = new AccountActivityPage();
         for (WebElement each : accountActivityPage.descriptionTable) {
             Assert.assertFalse("Verify description NOT show \"OFFICE\" transactions", each.getText().startsWith("OFFICE"));
         }
-    }*/
+    }*//*
 
     @When("the user enters description “online”")
     public void the_user_enters_description_online() throws InterruptedException {
@@ -162,6 +165,6 @@ public class FindTransactionsStepDefs extends BasePage {
 
         Assert.assertTrue("Verify results table should show at least one result under Withdrawal",num>0);
     }
-
+*/
 }
 

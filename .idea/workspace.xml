@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0c6c9cdc-93b0-409e-b422-21d346e7ce75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zerobank/pages/AccountActivityPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zerobank/pages/AccountActivityPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zerobank/pages/AccountSummaryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zerobank/pages/AccountSummaryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zerobank/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zerobank/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zerobank/stepdefinitions/AccountActivityNavigationStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zerobank/stepdefinitions/AccountActivityNavigationStepDefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/zerobank/stepdefinitions/FindTransactionsStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zerobank/stepdefinitions/FindTransactionsStepDefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/AccountActivityNavigation.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/AccountActivityNavigation.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/FindTransactions.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/FindTransactions.feature" afterDir="false" />
@@ -94,18 +90,27 @@
       <option name="project" value="LOCAL" />
       <updated>1591612063388</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="tuesday noon">
+      <created>1591694743469</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591694743469</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="saturday evening" />
     <MESSAGE value="monday noon" />
-    <option name="LAST_COMMIT_MESSAGE" value="monday noon" />
+    <MESSAGE value="tuesday noon" />
+    <option name="LAST_COMMIT_MESSAGE" value="tuesday noon" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2348" y="25" key="CommitChangelistDialog2" timestamp="1591612062588">
-      <screen x="1920" y="0" width="1536" height="864" />
+    <state x="428" y="25" key="CommitChangelistDialog2" timestamp="1591694742637">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="428" y="25" key="CommitChangelistDialog2/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591694742637" />
     <state x="2348" y="25" key="CommitChangelistDialog2/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591612062588" />
     <state width="1433" height="104" key="GridCell.Tab.0.bottom" timestamp="1591694720535">
       <screen x="0" y="0" width="1536" height="864" />
@@ -131,9 +136,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="298" y="83" key="SettingsEditor/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591345113101" />
-    <state x="2323" y="162" key="Vcs.Push.Dialog.v2" timestamp="1591612071064">
-      <screen x="1920" y="0" width="1536" height="864" />
+    <state x="403" y="162" key="Vcs.Push.Dialog.v2" timestamp="1591694749348">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="403" y="162" key="Vcs.Push.Dialog.v2/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591694749348" />
     <state x="2323" y="162" key="Vcs.Push.Dialog.v2/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591612071064" />
     <state x="2416" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1591687808698">
       <screen x="1920" y="0" width="1536" height="864" />
