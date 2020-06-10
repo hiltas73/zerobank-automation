@@ -54,16 +54,27 @@ public class FindTransactionsStepDefs {
     }
 
     @When("the user enters description {string}")
-    public void the_user_enters_description(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_user_enters_description(String searchItem) {
+        BrowserUtils.waitFor(2);
+        new AccountActivityPage().descriptionBtn.clear();
+        new AccountActivityPage().descriptionBtn.sendKeys(searchItem);
     }
 
     @Then("results table should only show descriptions containing {string}")
-    public void results_table_should_only_show_descriptions_containing(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void results_table_should_only_show_descriptions_containing(String searchItem) {
+        for (WebElement each : new AccountActivityPage().descriptionTable) {
+            System.out.println("each = " + each.getText());
+            Assert.assertTrue("Verify description only show \"ONLINE\" transactions", each.getText().startsWith(searchItem));
+
+        }
     }
+
+    @Then("results table should show no results containing {string}")
+    public void results_table_should_show_no_results_containing(String string) {
+        System.out.println("AccountActivityPage().noResultTab = " + new AccountActivityPage().noResultTab.getText());
+        Assert.assertTrue("verify no result is displayed",new AccountActivityPage().noResultTab.isDisplayed());
+    }
+
 
 
     @Then("results table should show at least one result under {string}")
@@ -89,6 +100,7 @@ public class FindTransactionsStepDefs {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
+
 
 
     /*@Given("the user accesses the Find Transactions tab")

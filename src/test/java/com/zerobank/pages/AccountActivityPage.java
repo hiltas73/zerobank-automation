@@ -44,6 +44,9 @@ public class AccountActivityPage extends BasePage {
     @FindBy(xpath = "(//tbody)[2]/tr/td[1]")
     public List<WebElement> dateTable;
 
+    @FindBy(xpath = "//div[contains(text(),'No results.')]")
+    public WebElement noResultTab;
+
     public boolean inBetween(String dateFrom, String dateTo) {
         boolean b = true;
 

@@ -1,4 +1,4 @@
-@wip
+
 Feature: Find Transactions in Account Activity
   Background:
     Given the user accesses the Find Transactions tab
@@ -13,21 +13,21 @@ Feature: Find Transactions in Account Activity
     Then results table should only show transactions between "2012-09-02" to "2012-09-06"
     And the results table should only not contain transactions dated "2012-09-01"
 
- # Scenario: Search description
-  #  When the user enters description "ONLINE"
-  #  And clicks search
-  #  Then results table should only show descriptions containing "ONLINE"
-  #  When the user enters description "OFFICE"
-  #  And clicks search
-  #  Then results table should only show descriptions containing "OFFICE"
-
-#  Scenario: Search description case insensitive
-#    When the user enters description "ONLINE"
-#    And clicks search
-#    Then results table should only show descriptions containing "ONLINE"
-#    When the user enters description "online"
-#    And clicks search
- #   Then results table should only show descriptions containing "ONLINE"
+  Scenario: Search description
+    When the user enters description "ONLINE"
+    And clicks search
+    Then results table should only show descriptions containing "ONLINE"
+    When the user enters description "OFFICE"
+    And clicks search
+    Then results table should only show descriptions containing "OFFICE"
+  @wip
+  Scenario: Search description case insensitive
+    When the user enters description "ONLINE"
+    And clicks search
+    Then results table should only show descriptions containing "ONLINE"
+    When the user enters description "online"
+    And clicks search
+    Then results table should show no results containing "online"
 
 #  Scenario: Type
 #    And clicks search
