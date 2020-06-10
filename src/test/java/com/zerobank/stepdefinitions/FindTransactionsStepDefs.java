@@ -3,18 +3,92 @@ package com.zerobank.stepdefinitions;
 import com.zerobank.pages.AccountActivityPage;
 import com.zerobank.pages.BasePage;
 import com.zerobank.pages.LoginPage;
+import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.en_old.Ac;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 public class FindTransactionsStepDefs {
 
+    @Given("the user accesses the Find Transactions tab")
+    public void the_user_accesses_the_Find_Transactions_tab() {
+        new LoginPage().login(ConfigurationReader.get("username"),ConfigurationReader.get("password"));
+        new BasePage().navigateToModule("Account Activity");
+        new BasePage().navigateToModule("Find Transactions");
+    }
 
+    @When("the user enters date range from {string} to {string}")
+    public void the_user_enters_date_range_from_to(String dateFrom, String dateTo) throws InterruptedException {
+        new AccountActivityPage().enterDates(dateFrom, dateTo);
+    }
+
+    @When("clicks search")
+    public void clicks_search() {
+        new AccountActivityPage().FindBtn.click();
+        BrowserUtils.waitFor(2);
+    }
+
+    @Then("results table should only show transactions between {string} to {string}")
+    public void results_table_should_only_show_transactions_between_to(String dateFrom, String dateTo) {
+        Assert.assertTrue("verify result table show only transactions between " + dateFrom
+                + " to " + dateTo, new AccountActivityPage().inBetween(dateFrom,dateTo));
+    }
+
+    @Then("the results should be sorted by most recent date")
+    public void the_results_should_be_sorted_by_most_recent_date() {
+        //System.out.println("new AccountActivityPage().isSorted() = " + new AccountActivityPage().isSorted());
+        Assert.assertTrue("verify results should be sorted by most recent date",new AccountActivityPage().isSorted());
+    }
+
+    @Then("the results table should only not contain transactions dated {string}")
+    public void the_results_table_should_only_not_contain_transactions_dated(String date) {
+        //System.out.println("BrowserUtils.getElementsText(new AccountActivityPage().dateTable) = " + BrowserUtils.getElementsText(new AccountActivityPage().dateTable));
+        //System.out.println("date = " + date);
+        Assert.assertFalse("the results table should only not contain transactions dated "+date,BrowserUtils.getElementsText(new AccountActivityPage().dateTable).contains(date));
+    }
+
+    @When("the user enters description {string}")
+    public void the_user_enters_description(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Then("results table should only show descriptions containing {string}")
+    public void results_table_should_only_show_descriptions_containing(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+
+    @Then("results table should show at least one result under {string}")
+    public void results_table_should_show_at_least_one_result_under(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @When("user selects type {string}")
+    public void user_selects_type(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Then("results table should show no result under Withdrawal")
+    public void results_table_should_show_no_result_under_Withdrawal() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Then("results table should show no result under Deposit")
+    public void results_table_should_show_no_result_under_Deposit() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
 
 
     /*@Given("the user accesses the Find Transactions tab")

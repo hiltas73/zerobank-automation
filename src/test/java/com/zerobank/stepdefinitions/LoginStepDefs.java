@@ -31,4 +31,10 @@ public class LoginStepDefs {
         Assert.assertTrue("verify successfully login",Driver.get().getCurrentUrl().contentEquals(expectedUrl));
     }
 
+    @Then("the user should not be able to login with invalid credentials {string} {string}")
+    public void theUserShouldNotBeAbleToLoginWithInvalidCredentials(String userName, String password) {
+        String expectedUrl = "http://zero.webappsecurity.com/login.html";
+        //System.out.println("Driver.get().getCurrentUrl() = " + Driver.get().getCurrentUrl());
+        Assert.assertTrue("Login and/or password are wrong.",Driver.get().getCurrentUrl().contentEquals(expectedUrl));
+    }
 }

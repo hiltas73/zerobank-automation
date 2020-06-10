@@ -25,7 +25,6 @@ public class LoginPage {
 
 
     public void login(String userNameStr, String passwordStr) {
-        Driver.get().get(ConfigurationReader.get("url"));
         userName.sendKeys(userNameStr);
         password.sendKeys(passwordStr);
         submit.click();

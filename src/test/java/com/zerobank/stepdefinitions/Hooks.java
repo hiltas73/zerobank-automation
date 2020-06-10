@@ -1,5 +1,6 @@
 package com.zerobank.stepdefinitions;
 
+import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -10,8 +11,10 @@ import org.openqa.selenium.TakesScreenshot;
 public class Hooks {
 
     @Before
-    public void setUp(){
-        System.out.println("\tthis is coming from BEFORE");
+    public void setUp(Scenario scenario){
+        Driver.get().get(ConfigurationReader.get("url"));
+        Driver.get().manage().window().maximize();
+        System.out.println(scenario.getName()+"...is starting...");
     }
 
     @After
@@ -20,6 +23,7 @@ public class Hooks {
 
             final byte[] screenshot = ((TakesScreenshot) Driver.get()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot,"image/png","screenshot");
+            System.out.println(Driver.get().getTitle()+" is FAILED...");
         }
 
         Driver.closeDriver();
