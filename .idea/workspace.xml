@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c6c9cdc-93b0-409e-b422-21d346e7ce75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0c6c9cdc-93b0-409e-b422-21d346e7ce75" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,17 +44,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CukesRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="zerobank-automation" />
       <extension name="coverage">
@@ -92,6 +79,7 @@
       <workItem from="1612783319498" duration="1027000" />
       <workItem from="1612786403143" duration="12000" />
       <workItem from="1612788280790" duration="88000" />
+      <workItem from="1612881130117" duration="205000" />
     </task>
     <task id="LOCAL-00001" summary="saturday evening">
       <created>1591467614468</created>
@@ -135,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612783594302</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="try out tuesday Feb 9th">
+      <created>1612881269691</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1612881269692</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +143,7 @@
     <MESSAGE value="tuesday noon+1" />
     <MESSAGE value="wednesday noon" />
     <MESSAGE value="try out Monday Feb 8th" />
-    <option name="LAST_COMMIT_MESSAGE" value="try out Monday Feb 8th" />
+    <MESSAGE value="try out tuesday Feb 9th" />
+    <option name="LAST_COMMIT_MESSAGE" value="try out tuesday Feb 9th" />
   </component>
 </project>
