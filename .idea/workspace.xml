@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0c6c9cdc-93b0-409e-b422-21d346e7ce75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zerobank/pages/AccountActivityPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zerobank/pages/AccountActivityPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zerobank/stepdefinitions/FindTransactionsStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zerobank/stepdefinitions/FindTransactionsStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/FindTransactions.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/FindTransactions.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +24,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ctGL2qKHBblFACebnauK6VmFqt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
@@ -76,6 +78,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -86,6 +89,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591340416096</updated>
+      <workItem from="1612783319498" duration="1027000" />
+      <workItem from="1612786403143" duration="12000" />
+      <workItem from="1612788280790" duration="88000" />
     </task>
     <task id="LOCAL-00001" summary="saturday evening">
       <created>1591467614468</created>
@@ -122,8 +128,18 @@
       <option name="project" value="LOCAL" />
       <updated>1591786087126</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="try out Monday Feb 8th">
+      <created>1612783594302</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612783594302</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="saturday evening" />
@@ -131,68 +147,7 @@
     <MESSAGE value="tuesday noon" />
     <MESSAGE value="tuesday noon+1" />
     <MESSAGE value="wednesday noon" />
-    <option name="LAST_COMMIT_MESSAGE" value="wednesday noon" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="428" y="25" key="CommitChangelistDialog2" timestamp="1591786086371">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="428" y="25" key="CommitChangelistDialog2/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591786086371" />
-    <state x="2348" y="25" key="CommitChangelistDialog2/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591703501829" />
-    <state width="1339" height="92" key="GridCell.Tab.0.bottom" timestamp="1591793186372">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1339" height="92" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591793186372" />
-    <state width="1281" height="66" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591785009038" />
-    <state width="1339" height="92" key="GridCell.Tab.0.center" timestamp="1591793186372">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1339" height="92" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591793186372" />
-    <state width="1281" height="66" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591785009038" />
-    <state width="1339" height="92" key="GridCell.Tab.0.left" timestamp="1591793186372">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1339" height="92" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591793186372" />
-    <state width="1281" height="66" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591785009038" />
-    <state width="1339" height="92" key="GridCell.Tab.0.right" timestamp="1591793186372">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1339" height="92" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591793186372" />
-    <state width="1281" height="66" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591785009038" />
-    <state x="2218" y="83" key="SettingsEditor" timestamp="1591706250688">
-      <screen x="1920" y="0" width="1536" height="864" />
-    </state>
-    <state x="298" y="83" key="SettingsEditor/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591345113101" />
-    <state x="2218" y="83" key="SettingsEditor/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591706250688" />
-    <state x="403" y="162" key="Vcs.Push.Dialog.v2" timestamp="1591786095613">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="403" y="162" key="Vcs.Push.Dialog.v2/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591786095613" />
-    <state x="2323" y="162" key="Vcs.Push.Dialog.v2/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591703512691" />
-    <state x="496" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1591773815315">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="496" y="254" key="com.intellij.ide.util.TipDialog/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591773815315" />
-    <state x="2416" y="254" key="com.intellij.ide.util.TipDialog/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591718045801" />
-    <state x="573" y="57" width="590" height="732" key="find.popup" timestamp="1591758554873">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="573" y="57" width="590" height="732" key="find.popup/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591758554873" />
-    <state width="600" height="424" key="javadoc.popup" timestamp="1591605321386">
-      <screen x="1920" y="0" width="1536" height="864" />
-    </state>
-    <state width="600" height="424" key="javadoc.popup/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591605321386" />
-    <state x="209" y="137" key="new project wizard" timestamp="1591348025036">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="209" y="137" key="new project wizard/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591348025036" />
-    <state x="475" y="192" key="run.anything.popup" timestamp="1591369388213">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="475" y="192" key="run.anything.popup/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591369388213" />
-    <state x="2396" y="184" width="672" height="678" key="search.everywhere.popup" timestamp="1591706228984">
-      <screen x="1920" y="0" width="1536" height="864" />
-    </state>
-    <state x="2396" y="184" width="672" height="678" key="search.everywhere.popup/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591706228984" />
+    <MESSAGE value="try out Monday Feb 8th" />
+    <option name="LAST_COMMIT_MESSAGE" value="try out Monday Feb 8th" />
   </component>
 </project>
