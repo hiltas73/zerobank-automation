@@ -1,4 +1,4 @@
 # Project exclude paths
-target/
-.idea/
-zerobank_automation.iml
+/target/
+/.idea/
+/zerobank_automation.iml
